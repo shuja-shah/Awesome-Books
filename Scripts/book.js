@@ -68,6 +68,7 @@ class userInterface{
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     let id = Math.floor(Math.random() * 1000) + 1;
+    id.toString();
     e.preventDefault();
     // Now we use our constructor from the book class.
     const newBook = new awesomeBooks(title, author ,id);
@@ -83,7 +84,9 @@ class userInterface{
     if (e.target.classList.contains('delete')) {
       e.target.parentElement.remove();
     }
-    storage.remove(e.target.parentElement.previousElementSibling.textContent);
+    
+    const tity =parseInt(e.target.parentElement.children[2].innerText);
+    storage.remove(tity);;
   }
   );
   
