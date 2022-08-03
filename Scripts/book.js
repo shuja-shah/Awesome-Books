@@ -1,9 +1,8 @@
 /* eslint-disable max-classes-per-file */
-/* eslint-disable new-cap */
-/* eslint-disable radix */
+
 const getAppended = document.getElementById('book-container');
 
-class awesomeBooks {
+class AwesomeBooks {
   constructor(title, author, id) {
     this.title = title;
     this.author = author;
@@ -74,7 +73,7 @@ document.getElementById('form').addEventListener('submit', (e) => {
   const id = Math.floor(Math.random() * 1000) + 1;
   id.toString();
   e.preventDefault();
-  const newBook = new awesomeBooks(title, author, id);
+  const newBook = new AwesomeBooks(title, author, id);
   userInterface.addBookToList(newBook);
   userInterface.clearFields();
   storage.addition(newBook);
@@ -85,6 +84,6 @@ getAppended.addEventListener('click', (e) => {
     e.target.parentElement.remove();
   }
 
-  const tity = parseInt(e.target.parentElement.children[2].innerText);
+  const tity = parseInt(e.target.parentElement.children[2].innerText, 10);
   storage.remove(tity);
 });
