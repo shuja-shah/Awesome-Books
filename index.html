@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome Book Collection</title>
+    <link rel="stylesheet" href="Stylesheets/style.css">
 </head>
 
 <body>
@@ -15,12 +16,15 @@
 
     <main>
         <section id="Book">
-            <form action="#" method="post">
-                <label for="title">Title:</label>
-                <input type="text" name="title" id="title" required>
-                <label for="author">Author:</label>
-                <input type="text" name="author" id="author" required>
-                <input type="submit" value="Add Book" id="add-book">
+            <div id="book-container"> </div>
+            <div class="addtext">Add a new book</div>
+           
+            <form id= "form">
+                <!-- <label for="title">Title:</label> -->
+                <input placeholder="Title" type="text" name="title" id="title" required>
+                <!-- <label for="author">Author:</label> -->
+                <input placeholder="Author" type="text" name="author" id="author" required>
+                <input type="submit" value="Add" id="add-book">
             </form>
         </section>
     </main>
