@@ -3,14 +3,6 @@
 /* eslint-disable radix */
 const getAppended = document.getElementById('book-container');
 
-class awesomeBooks {
-  constructor(title, author, id) {
-    this.title = title;
-    this.author = author;
-    this.id = id;
-  }
-}
-
 class storage {
   static getData() {
     let books;
@@ -36,6 +28,14 @@ class storage {
       }
     });
     localStorage.setItem('books', JSON.stringify(books));
+  }
+}
+
+class AwesomeBooks {
+  constructor(title, author, id) {
+    this.title = title;
+    this.author = author;
+    this.id = id;
   }
 }
 
@@ -74,7 +74,7 @@ document.getElementById('form').addEventListener('submit', (e) => {
   const id = Math.floor(Math.random() * 1000) + 1;
   id.toString();
   e.preventDefault();
-  const newBook = new awesomeBooks(title, author, id);
+  const newBook = new AwesomeBooks(title, author, id);
   userInterface.addBookToList(newBook);
   userInterface.clearFields();
   storage.addition(newBook);
@@ -85,6 +85,6 @@ getAppended.addEventListener('click', (e) => {
     e.target.parentElement.remove();
   }
 
-  const tity = parseInt(e.target.parentElement.children[2].innerText);
+  const tity = Number(e.target.parentElement.children[2].innerText);
   storage.remove(tity);
 });
