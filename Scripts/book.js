@@ -21,7 +21,7 @@ class userInterface {
     const beAppended = document.createElement("div");
     beAppended.className = "kitab";
     beAppended.innerHTML = `
-       <h2>${book.title}</h2> <span class = 'creator'>${book.author}</span>
+       <h4>${book.title}</h4> <span class = 'creator'>${book.author}</span>
        <p class="identity-book">${book.id}</p> 
        <button class = 'delete'>Delete</button>
        `;
