@@ -1,56 +1,50 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Awesome Book List!!
 
-> Description the project.
+> This a book list that is genreated from your local storage.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML, CSS , JavaScript
+- SCSS
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+
 
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-### Setup
 
 ### Install
+ - Install using Code button in repo and Download the zip files. 
 
 ### Usage
+    - To add a book to the list, click the + button.
+    - To remove a book from the list, click the - button.
 
 ### Run tests
-
-### Deployment
-
+    run test using ``` npm hint . ``` in the terminal.
 
 
-## Authors
 
-👤 **Author1**
+# Authors
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Syed Shuja Hussain (He/Him)**
 
-👤 **Author2**
+- GitHub: [@shuja-shah](https://github.com/shuja-shah)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+👤 **Bakhtiyor*
+
+- GitHub: [@bakhtiyor](https://github.com/username-forGithub)
+
+
+
 
 ## 🤝 Contributing
 
@@ -64,9 +58,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- The Awesome Teamwork! and Microverse!
 
 ## 📝 License
+
 This project is [MIT](./MIT.md) licensed.
