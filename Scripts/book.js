@@ -11,32 +11,6 @@ class awesomeBooks {
   }
 }
 
-class userInterface {
-  static displayBooks() {
-    const books = storage.getData();
-
-    const myBooks = books;
-    myBooks.forEach((book) => {
-      userInterface.addBookToList(book);
-    });
-  }
-
-  static addBookToList(book) {
-    const beAppended = document.createElement('div');
-    beAppended.className = 'kitab';
-    beAppended.innerHTML = `
-       <h4>${book.title}</h4> <span class = 'creator'>${book.author}</span>
-       <p class="identity-book">${book.id}</p> 
-       <button class = 'delete'>Delete</button>
-       `;
-    getAppended.appendChild(beAppended);
-  }
-
-  static clearFields() {
-    document.getElementById('title').value = '';
-    document.getElementById('author').value = '';
-  }
-}
 class storage {
   static getData() {
     let books;
@@ -62,6 +36,33 @@ class storage {
       }
     });
     localStorage.setItem('books', JSON.stringify(books));
+  }
+}
+
+class userInterface {
+  static displayBooks() {
+    const books = storage.getData();
+
+    const myBooks = books;
+    myBooks.forEach((book) => {
+      userInterface.addBookToList(book);
+    });
+  }
+
+  static addBookToList(book) {
+    const beAppended = document.createElement('div');
+    beAppended.className = 'kitab';
+    beAppended.innerHTML = `
+       <h4>${book.title}</h4> <span class = 'creator'>${book.author}</span>
+       <p class="identity-book">${book.id}</p> 
+       <button class = 'delete'>Delete</button>
+       `;
+    getAppended.appendChild(beAppended);
+  }
+
+  static clearFields() {
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
   }
 }
 
