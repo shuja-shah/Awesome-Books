@@ -1,4 +1,4 @@
-*/ eslint-disable max-classes-per-file */
+/* eslint-disable max-classes-per-file */
 
 const getAppended = document.getElementById('book-container');
 class AwesomeBooks {
@@ -18,11 +18,13 @@ class storage {
     }
     return books;
   }
+
   static addition(book) {
     const books = storage.getData();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
+
   static remove(id) {
     const books = storage.getData();
     books.forEach((book, index) => {
@@ -41,6 +43,7 @@ class userInterface {
       userInterface.addBookToList(book);
     });
   }
+
   static addBookToList(book) {
     const beAppended = document.createElement('div');
     beAppended.className = 'kitab';
@@ -51,6 +54,7 @@ class userInterface {
        `;
     getAppended.appendChild(beAppended);
   }
+
   static clearFields() {
     document.getElementById('title').value = '';
     document.getElementById('author').value = '';
