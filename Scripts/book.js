@@ -117,3 +117,27 @@ getContact.addEventListener('click', (e) => {
   });
   e.target.classList.toggle('active');
 });
+let displayDate = document.querySelector(".time");
+const realTime = () => {
+  const date = new Date();
+  const dateOptions = {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  };
+
+  const timeOptions = {
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    hour12: true,
+  };
+
+  const currentDate = date.toLocaleDateString('en-GB', dateOptions);
+  const currentTime = date.toLocaleTimeString('en-GB', timeOptions);
+  displayDate.innerHTML = `${currentDate} ${currentTime}`;
+
+  setTimeout(() => { realTime(); }, 1000);
+};
+
+realTime();
