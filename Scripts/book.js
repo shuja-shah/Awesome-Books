@@ -117,7 +117,7 @@ getContact.addEventListener('click', (e) => {
   });
   e.target.classList.toggle('active');
 });
-let displayDate = document.querySelector(".time");
+const displayDate = document.querySelector('.time');
 const realTime = () => {
   const date = new Date();
   const dateOptions = {
