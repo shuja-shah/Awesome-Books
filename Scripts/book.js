@@ -1,5 +1,3 @@
-/* eslint-disable max-classes-per-file */
-
 const getAppended = document.getElementById('book-container');
 class AwesomeBooks {
   constructor(title, author, id) {
@@ -7,8 +5,7 @@ class AwesomeBooks {
     this.author = author;
     this.id = id;
   }
-}
-class storage {
+
   static getData() {
     let books;
     if (localStorage.getItem('books') === null) {
@@ -20,13 +17,13 @@ class storage {
   }
 
   static addition(book) {
-    const books = storage.getData();
+    const books = AwesomeBooks.getData();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
 
   static remove(id) {
-    const books = storage.getData();
+    const books = AwesomeBooks.getData();
     books.forEach((book, index) => {
       if (book.id === id) {
         books.splice(index, 1);
@@ -34,13 +31,12 @@ class storage {
     });
     localStorage.setItem('books', JSON.stringify(books));
   }
-}
-class userInterface {
+
   static displayBooks() {
-    const books = storage.getData();
+    const books = AwesomeBooks.getData();
     const myBooks = books;
     myBooks.forEach((book) => {
-      userInterface.addBookToList(book);
+      AwesomeBooks.addBookToList(book);
     });
   }
 
@@ -60,7 +56,7 @@ class userInterface {
     document.getElementById('author').value = '';
   }
 }
-document.addEventListener('DOMContentLoaded', userInterface.displayBooks);
+document.addEventListener('DOMContentLoaded', AwesomeBooks.displayBooks());
 document.getElementById('form').addEventListener('submit', (e) => {
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
@@ -68,16 +64,16 @@ document.getElementById('form').addEventListener('submit', (e) => {
   id.toString();
   e.preventDefault();
   const newBook = new AwesomeBooks(title, author, id);
-  userInterface.addBookToList(newBook);
-  userInterface.clearFields();
-  storage.addition(newBook);
+  AwesomeBooks.addBookToList(newBook);
+  AwesomeBooks.clearFields();
+  AwesomeBooks.addition(newBook);
 });
 getAppended.addEventListener('click', (e) => {
   if (e.target.classList.contains('delete')) {
     e.target.parentElement.remove();
   }
   const tity = parseInt(e.target.parentElement.children[2].innerText, 10);
-  storage.remove(tity);
+  AwesomeBooks.remove(tity);
 });
 const getList = document.querySelector('.list');
 const getAddNew = document.querySelector('.add_new');
