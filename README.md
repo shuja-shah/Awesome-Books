@@ -37,15 +37,8 @@ To get a local copy up and running follow these simple example steps.
 👤 **Syed Shuja Hussain (He/Him)**
 
 - GitHub: [@shuja-shah](https://github.com/shuja-shah)
-
-
-👤 **Bakhtiyor*
-
-- GitHub: [@bakhtiyor](https://github.com/username-forGithub)
-
-👤 **Marvellous*
-
-- GitHub: [@Tommymarvel](https://github.com/Tommymarvel)
+- Twitter : [@SyedShujaHussa3](https://twitter.com/SyedShujaHussa3)
+- LinkedIn :[@syedshujahussa](https://www.linkedin.com/in/syedshujahussa/)
 
 
 
