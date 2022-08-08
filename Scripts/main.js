@@ -1,6 +1,7 @@
 import displayBox from './Modules/displayBox.js';
 import Intialize from './Modules/initial.js';
 import myStorage from './Modules/myStorage.js';
+import { DateTime } from './Modules/luxon.js';
 
 const getAppended = document.getElementById('book-container');
 
@@ -65,3 +66,11 @@ getContact.addEventListener('click', (e) => {
   });
   e.target.classList.toggle('active');
 });
+
+const currentDate = DateTime.local().toLocaleString(DateTime.DATE_FULL);
+const currentTime = DateTime.local().toLocaleString(DateTime.TIME_24_WITH_SECONDS);
+const currentDateTime = `${currentDate} ${currentTime}`;
+const date = document.createElement('li');
+date.classList.add('date');
+date.innerText = currentDateTime;
+document.querySelector('main').insertBefore(date, document.querySelector('main').firstChild);
